@@ -7,9 +7,17 @@ def naturalSelection(population, populationSize, private_key):
     prevGenFitnessValidation=[]
     for i in range(0, populationSize):
         temp=client_moodle.get_errors(private_key, population[i])
-        # print(str(i)+"th element's error for train and validation are " +str(temp[0])+" "+str(temp[1]))
+        print(str(i)+"th element's error for train and validation are " +str(temp[0])+" "+str(temp[1]))
         prevGenFitnessTrain.append(temp[0])
         prevGenFitnessValidation.append(temp[1])
+    # trainGuidelineUpper = 3625792
+    # trainGuidelineLower = 79569
+    # validationGuidelineUpper = 3625792
+
+    # population = [x for _, x in sorted(zip(prevGenFitnessTrain, population))] 
+    
+    ####median method
+    
     medTrainVal = statistics.median(prevGenFitnessTrain)
     medValidationVal = statistics.median(prevGenFitnessValidation)
     indexTrain=[]
