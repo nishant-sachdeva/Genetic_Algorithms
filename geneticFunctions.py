@@ -1,39 +1,40 @@
 import client_moodle
 import random
 import statistics
+import math
 
 def naturalSelection(population, populationSize, private_key):
-    prevGenFitnessTrain=[]
-    prevGenFitnessValidation=[]
+    thisGenFitnessTrain=[]
+    thisGenFitnessValidation=[]
     for i in range(0, populationSize):
         temp=client_moodle.get_errors(private_key, population[i])
         print(str(i)+"th element's error for train and validation are " +str(temp[0])+" "+str(temp[1]))
-        prevGenFitnessTrain.append(temp[0])
-        prevGenFitnessValidation.append(temp[1])
+        thisGenFitnessTrain.append(temp[0])
+        thisGenFitnessValidation.append(temp[1])
     # trainGuidelineUpper = 3625792
     # trainGuidelineLower = 79569
     # validationGuidelineUpper = 3625792
 
-    population = [x for _, x in sorted(zip(prevGenFitnessValidation, population))]
-    sortedFitnessValArray = sorted(prevGenFitnessValidation) 
+    population = [x for _, x in sorted(zip(thisGenFitnessValidation, population))]
+    sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
     fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/5))]
 
-    return fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray
+    return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray
     ####median method
     
-    # medTrainVal = statistics.median(prevGenFitnessTrain)
-    # medValidationVal = statistics.median(prevGenFitnessValidation)
+    # medTrainVal = statistics.median(thisGenFitnessTrain)
+    # medValidationVal = statistics.median(thisGenFitnessValidation)
     # indexTrain=[]
     # indexValidation=[]
     # for i in range(0, populationSize):
-    #     if prevGenFitnessTrain[i]>medTrainVal:
+    #     if thisGenFitnessTrain[i]>medTrainVal:
     #         indexTrain.append(i)
-    #     if prevGenFitnessValidation[i]<medValidationVal:
+    #     if thisGenFitnessValidation[i]<medValidationVal:
     #         indexValidation.append(i)
     # commonIndices = list(set(indexTrain).intersection(set(indexValidation)))
-    # return commonIndices, indexTrain, indexValidation, prevGenFitnessTrain, prevGenFitnessValidation
+    # return commonIndices, indexTrain, indexValidation, thisGenFitnessTrain, thisGenFitnessValidation
 
 def crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing):
     for i in range(0, len(fittestIndividualsForDirect)):
@@ -96,7 +97,7 @@ def mate(population, symmetricDifferenceIndex):
 
     #####double-point crossover
 
-    crossoverPoint0 = random.randint(0, 9)
+    crossoverPoint0 = random.randint(0, 5)
     crossoverPoint1 = random.randint(crossoverPoint0+1, 10)
     for i in range(0, 11):
         if i < crossoverPoint0:
@@ -116,17 +117,30 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0, populationSize):
         coin = random.uniform(0, 1)
-        if coin > 0.95:
+        if coin > 0.8:
             for j in range(0, 11):
                 coin1=random.uniform(0, 1)
-                if coin1>0.95:
-                    nextGenPopulation[i][j]=random.uniform(-10, 10)
+                if coin1>0.35:
+                    # print("value", nextGenPopulation[i][j])
+                    # print(math.fabs(nextGenPopulation[i][j]))
+                    if nextGenPopulation[i][j]!=0.0:
+                        power = int(math.log(math.fabs(nextGenPopulation[i][j]), 10))
+                        if power < -2:
+                            orderOfMagnitude=random.randint(power-2,power+2)
+                        else:
+                            orderOfMagnitude=-2
+                        nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, orderOfMagnitude))
+                        if abs(nextGenPopulation[i][j])>10:
+                            while abs(nextGenPopulation[i][j])>10:
+                                nextGenPopulation[i][j]/=10
+                    else:
+                        nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, -2))
     return nextGenPopulation
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):
     f2 = open("bestErrorVal.txt", "w+")
-    f3 = open("bestPopulation.txt", "w+")
+    f3 = open("bestPopulation.txt", "w")
     bestErrorVal=f2.read()
     if len(bestErrorVal)!=0:
         bestErrorVal=int(bestErrorVal)

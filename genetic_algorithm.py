@@ -7,7 +7,7 @@ import json
 
 import pickle
 
-populationSize = 30
+populationSize = 50
 
 f = open("overfit.txt", "r+")
 
@@ -34,12 +34,13 @@ population = []
 try:
     with open('data.txt') as new_filename:
         population = json.load(new_filename)
-
+        population=population[:47]
+        for i in range(3):
+            population.append(num)
 except:
     print("the file did not load :/")
     for i in range(3):
         population.append(num)
-
     for i in range(0, populationSize-3):
         person = []
         for i in range(0, 11):
@@ -49,18 +50,16 @@ except:
 
 
 
-nextGenPopulation = []
-for i in range(1, 40):
-    print("Generation: "+str(i))
-    # for i in range(0, populationSize):
-    #     print(type(population[i]))
-    fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
+for i in range(0, 6):
+    nextGenPopulation = []
+    print("Generation: "+str(i+1))
+    population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
     nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
     population=nextGenPopulation
     geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
-    # print(str(statistics.median(thisGenTrain))+" "+str(statistics.median(thisGenValidation)))
-
+    print(len(population))
+    print(len(nextGenPopulation))
 
 
 
