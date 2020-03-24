@@ -1,0 +1,210 @@
+<class 'list'>
+generation 1
+0th element's error for train and validation are 6.551872745516536e+29 9.103839483996092e+29
+1th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+2th element's error for train and validation are 79569.63536912124 3625792.834235452
+3th element's error for train and validation are 4.097823860517914e+34 5.67067372658652e+34
+4th element's error for train and validation are 1.163210076317343e+34 1.6237402839593254e+34
+5th element's error for train and validation are 4.364625120561615e+34 5.992339889957928e+34
+6th element's error for train and validation are 1.163210076317343e+34 1.6237402839593254e+34
+7th element's error for train and validation are 4.364625120561615e+34 5.992339889957928e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 2
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 3
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 4
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 5
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 6
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 7
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 8
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 9
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 10
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 11
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 12
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 13
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 14
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647357378e+34 1.6263845418906386e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 15
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647357378e+34 1.6263845418906386e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 16
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.3042457049508195e+34 5.992019299051946e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647357378e+34 1.6263845418906386e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 17
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.3042457049508195e+34 5.992019299051946e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647356069e+34 1.6263845418904633e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 18
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.3042457049508195e+34 5.992019299051946e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647356069e+34 1.6263845418904633e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275261984e+34 5.995125456568931e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.625183811498802e+34
+generation 19
+0th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+1th element's error for train and validation are 4.3042457049508195e+34 5.992019299051946e+34
+2th element's error for train and validation are 4.375233569953269e+34 5.993641204889022e+34
+3th element's error for train and validation are 79569.63536912124 3625792.834235452
+4th element's error for train and validation are 4.366679275262378e+34 5.995125456569471e+34
+5th element's error for train and validation are 4.097823860517914e+34 5.670673726586522e+34
+6th element's error for train and validation are 1.1651381647356069e+34 1.6263845418904633e+34
+7th element's error for train and validation are 4.366679275262379e+34 5.995125456569474e+34
+8th element's error for train and validation are 4.366679275261984e+34 5.995125456568931e+34
+9th element's error for train and validation are 1.164268577960873e+34 1.6251838114988023e+34

@@ -125,7 +125,7 @@ def mutate(nextGenPopulation, populationSize):
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):
-    f2 = open("bestErrorVal.txt", "r+")
+    f2 = open("bestErrorVal.txt", "rw+")
     f3 = open("bestPopulation.txt", "w+")
 
     bestErrorVal=f2.read()
