@@ -4,7 +4,7 @@ import random
 import statistics
 import geneticFunctions
 
-populationSize=8
+populationSize=20
 f=open("overfit.txt", "r+")
 num = f.read()
 num = num.replace("[", " ")
@@ -26,7 +26,7 @@ for i in range(0, populationSize):
 nextGenPopulation=[]
 print("Generation: 0", end=" ")
 
-for i in range(1, 100):
+for i in range(1, 10):
     fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
     nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
