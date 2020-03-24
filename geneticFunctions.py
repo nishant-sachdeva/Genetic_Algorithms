@@ -10,9 +10,9 @@ def naturalSelection(population, populationSize, private_key):
         print(str(i)+"th element's error for train and validation are " +str(temp[0])+" "+str(temp[1]))
         prevGenFitnessTrain.append(temp[0])
         prevGenFitnessValidation.append(temp[1])
-    trainGuidelineUpper = 3625792
-    trainGuidelineLower = 79569
-    validationGuidelineUpper = 3625792
+    # trainGuidelineUpper = 3625792
+    # trainGuidelineLower = 79569
+    # validationGuidelineUpper = 3625792
 
     population = [x for _, x in sorted(zip(prevGenFitnessValidation, population))]
     sortedFitnessValArray = sorted(prevGenFitnessValidation) 
@@ -20,7 +20,7 @@ def naturalSelection(population, populationSize, private_key):
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
     fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/5))]
 
-    return fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessVal
+    return fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray
     ####median method
     
     # medTrainVal = statistics.median(prevGenFitnessTrain)
@@ -39,12 +39,12 @@ def crossover(population, nextGenPopulation, populationSize, fittestIndividualsF
     for i in range(0, len(fittestIndividualsForDirect)):
         nextGenPopulation.append(population[fittestIndividualsForDirect[i]])
         
-    for i in range(0, (populationSize-len(fittestIndividualsForDirect))/2):
+    for i in range(0, int((populationSize-len(fittestIndividualsForDirect))/2)):
         tempArray = mate(population, fittestIndividualsForCrossing)
         nextGenPopulation.append(tempArray[0])
         nextGenPopulation.append(tempArray[1])
     if len(nextGenPopulation)!=populationSize:
-        nextGenPopulation.append(fittestIndividualsForDirect[0])
+        nextGenPopulation.append(population[fittestIndividualsForDirect[0]])
     return nextGenPopulation
     # if len(commonIndices)>0:
     #     for i in range(0, len(commonIndices)):
@@ -66,8 +66,8 @@ def crossover(population, nextGenPopulation, populationSize, fittestIndividualsF
 
 
 def mate(population, symmetricDifferenceIndex):
-    a = random.randint(0, len(symmetricDifferenceIndex)-1)
-    b = random.randint(0, len(symmetricDifferenceIndex)-1)
+    a=random.randint(0, len(symmetricDifferenceIndex)-1)
+    b=random.randint(0, len(symmetricDifferenceIndex)-1)
     while b==a:
         b=random.randint(0, len(symmetricDifferenceIndex)-1)
     offSpring0=[]
@@ -125,21 +125,18 @@ def mutate(nextGenPopulation, populationSize):
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):
-    f2 = open("bestErrorVal.txt", "rw+")
+    f2 = open("bestErrorVal.txt", "w+")
     f3 = open("bestPopulation.txt", "w+")
-
     bestErrorVal=f2.read()
-
     if len(bestErrorVal)!=0:
-        
         bestErrorVal=int(bestErrorVal)
-        
         if bestErrorVal>bestErrorValOfGeneration:
             bestErrorVal=bestErrorValOfGeneration
+            f2.write(str(bestErrorVal))
             f3.write(str(population))
-
     else:
         bestErrorVal = bestErrorValOfGeneration
+        f2.write(str(bestErrorVal))
         f3.write(str(population))
     f3.close()
     f2.close()
