@@ -44,7 +44,7 @@ def crossover(population, nextGenPopulation, populationSize, fittestIndividualsF
         nextGenPopulation.append(tempArray[0])
         nextGenPopulation.append(tempArray[1])
     if len(nextGenPopulation)!=populationSize:
-        nextGenPopulation.append(fittestIndividualsForDirect[0])
+        nextGenPopulation.append(population[fittestIndividualsForDirect[0]])
     return nextGenPopulation
     # if len(commonIndices)>0:
     #     for i in range(0, len(commonIndices)):
