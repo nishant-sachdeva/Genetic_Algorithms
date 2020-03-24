@@ -27,10 +27,11 @@ nextGenPopulation=[]
 print("Generation: 0", end=" ")
 
 for i in range(1, 100):
-    commonIndices, indexTrain, indexValidation, thisGenTrain, thisGenValidation=geneticFunctions.naturalSelection(population, populationSize, private_key)
-    nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, commonIndices, indexTrain, indexValidation)
+    fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
+    nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
     print(population)
     population=nextGenPopulation
+    geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
     # print(str(statistics.median(thisGenTrain))+" "+str(statistics.median(thisGenValidation)))
     print("Generation: "+str(i), end=" ")
