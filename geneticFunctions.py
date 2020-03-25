@@ -2,6 +2,18 @@ import client_moodle
 import random
 import statistics
 import math
+import numpy as np
+
+def generate_data_for_comparison(validation_data,  train_data):
+    validation_data = np.asarray(validation_data)
+    
+    train_data = np.asarray(train_data)
+
+    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 3)  , validation_data ) 
+
+    return return_array.tolist()
+
+
 
 def naturalSelection(population, populationSize, private_key):
     thisGenFitnessTrain=[]
@@ -15,11 +27,15 @@ def naturalSelection(population, populationSize, private_key):
     # trainGuidelineLower = 79569
     # validationGuidelineUpper = 3625792
 
+    #code to convert validation and train sets into numpy arrays and applying (y-x) ^3 * y onto them and returning a normal list into the requitsite function
+
+    array_to_be_used_for_comparison= generate_data_for_comparison(array_to_be_used_for_comparison , thisGenFitnessTrain)
+
     population = [x for _, x in sorted(zip(thisGenFitnessValidation, population))]
     sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
-    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/5))]
+    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/2))]
 
     return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray
     ####median method
@@ -75,14 +91,14 @@ def mate(population, symmetricDifferenceIndex):
     offSpring1=[]
     #####uniform crossover
 
-    # for i in range(0, 11):
-    #     coin = random.uniform(0, 1)
-    #     if coin > 0.5:
-    #         offSpring0.append(population[a][i])
-    #         offSpring1.append(population[b][i])
-    #     else:
-    #         offSpring0.append(population[b][i])
-    #         offSpring1.append(population[a][i])
+    for i in range(0, 11):
+        coin = random.uniform(0, 1)
+        if coin > 0.5:
+            offSpring0.append(population[a][i])
+            offSpring1.append(population[b][i])
+        else:
+            offSpring0.append(population[b][i])
+            offSpring1.append(population[a][i])
     
     #####single-point crossover
 
@@ -97,45 +113,65 @@ def mate(population, symmetricDifferenceIndex):
 
     #####double-point crossover
 
-    crossoverPoint0 = random.randint(0, 5)
-    crossoverPoint1 = random.randint(crossoverPoint0+1, 10)
-    for i in range(0, 11):
-        if i < crossoverPoint0:
-            offSpring0.append(population[a][i])
-            offSpring1.append(population[b][i])
-        elif i >= crossoverPoint0 and i < crossoverPoint1:
-            offSpring0.append(population[b][i])
-            offSpring1.append(population[a][i])
-        else:
-            offSpring0.append(population[a][i])
-            offSpring1.append(population[b][i])
+    # crossoverPoint0 = random.randint(0, 5)
+    # crossoverPoint1 = random.randint(crossoverPoint0+1, 10)
+    # for i in range(0, 11):
+    #     if i < crossoverPoint0:
+    #         offSpring0.append(population[a][i])
+    #         offSpring1.append(population[b][i])
+    #     elif i >= crossoverPoint0 and i < crossoverPoint1:
+    #         offSpring0.append(population[b][i])
+    #         offSpring1.append(population[a][i])
+    #     else:
+    #         offSpring0.append(population[a][i])
+    #         offSpring1.append(population[b][i])
+
+    ###### procedure ends here
+
     offSprings = []
     offSprings.append(offSpring0)
     offSprings.append(offSpring1)
     return offSprings
 
 def mutate(nextGenPopulation, populationSize):
-    for i in range(0, populationSize):
-        coin = random.uniform(0, 1)
-        if coin > 0.8:
-            for j in range(0, 11):
-                coin1=random.uniform(0, 1)
-                if coin1>0.35:
-                    # print("value", nextGenPopulation[i][j])
-                    # print(math.fabs(nextGenPopulation[i][j]))
-                    if nextGenPopulation[i][j]!=0.0:
-                        power = int(math.log(math.fabs(nextGenPopulation[i][j]), 10))
-                        if power < -2:
-                            orderOfMagnitude=random.randint(power-2,power+2)
-                        else:
-                            orderOfMagnitude=-2
-                        nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, orderOfMagnitude))
-                        if abs(nextGenPopulation[i][j])>10:
-                            while abs(nextGenPopulation[i][j])>10:
-                                nextGenPopulation[i][j]/=10
-                    else:
-                        nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, -2))
+    for i in range(0 , populationSize):
+        coin = random.uniform(0,1)
+        if coin > 0.6 : 
+            for j in range(0 , 11):
+                another_coin = random.uniform(0,1)
+                if another_coin > 0.35:
+                    # now we form an new gene basically
+                    temp = nextGenPopulation[i][j] * 0.9 * random.choice([-1 , 1])
+
+                    nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
+                    if nextGenPopulation[i][j] > 10 or nextGenPopulation[i][j] < -10 : 
+                        nextGenPopulation[i][j] = float(nextGenPopulation[i][j]/10 )
+                    # now we have to choose whether to add / subtract this thing from the 
+
+
     return nextGenPopulation
+
+    # for i in range(0, populationSize):
+    #     coin = random.uniform(0, 1)
+    #     if coin > 0.6:
+    #         for j in range(0, 11):
+    #             coin1=random.uniform(0, 1)
+    #             if coin1>0.35:
+    #                 # print("value", nextGenPopulation[i][j])
+    #                 # print(math.fabs(nextGenPopulation[i][j]))
+    #                 if nextGenPopulation[i][j]!=0.0:
+    #                     power = int(math.log(math.fabs(nextGenPopulation[i][j]), 10))
+    #                     if power < -2:
+    #                         orderOfMagnitude=random.randint(power-2,power+2)
+    #                     else:
+    #                         orderOfMagnitude=-2
+    #                     nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, orderOfMagnitude))
+    #                     if abs(nextGenPopulation[i][j])>10:
+    #                         while abs(nextGenPopulation[i][j])>10:
+    #                             nextGenPopulation[i][j]/=10
+    #                 else:
+    #                     nextGenPopulation[i][j]+=(random.uniform(-10, 10)*pow(10, -2))
+    # return nextGenPopulation
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):

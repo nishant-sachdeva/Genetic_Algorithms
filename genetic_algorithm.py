@@ -7,7 +7,7 @@ import json
 
 import pickle
 
-populationSize = 50
+populationSize = 100
 
 f = open("overfit.txt", "r+")
 
@@ -27,21 +27,26 @@ for i in range(0, len(num)):
 private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 
 
-print(num)
+# print(num)
 
 population = []
 
 try:
     with open('data.txt') as new_filename:
         population = json.load(new_filename)
-        population=population[:47]
-        for i in range(3):
-            population.append(num)
+        population=population[10:]
+        for i in range(0,90):
+            person = []
+            for j in range(0, 11):
+                gene = random.uniform(-10, 10)
+                person.append(gene)
+            population.append(person)
+    
 except:
     print("the file did not load :/")
-    for i in range(3):
+    for i in range(1):
         population.append(num)
-    for i in range(0, populationSize-3):
+    for i in range(0, populationSize-1):
         person = []
         for i in range(0, 11):
             gene = random.uniform(-10, 10)
