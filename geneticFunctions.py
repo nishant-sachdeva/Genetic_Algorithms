@@ -141,7 +141,7 @@ def mutate(nextGenPopulation, populationSize):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
                     # now we form an new gene basically
-                    temp = nextGenPopulation[i][j] * 0.9 * random.choice([-1 , 1])
+                    temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
 
                     nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
                     if nextGenPopulation[i][j] > 10 or nextGenPopulation[i][j] < -10 : 
