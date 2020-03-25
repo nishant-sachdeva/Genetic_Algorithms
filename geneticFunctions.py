@@ -9,7 +9,7 @@ def generate_data_for_comparison(validation_data,  train_data):
     
     train_data = np.asarray(train_data)
 
-    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 3)  , validation_data ) 
+    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 3)  , train_data ) 
 
     return return_array.tolist()
 
@@ -29,9 +29,9 @@ def naturalSelection(population, populationSize, private_key):
 
     #code to convert validation and train sets into numpy arrays and applying (y-x) ^3 * y onto them and returning a normal list into the requitsite function
 
-    array_to_be_used_for_comparison= generate_data_for_comparison(array_to_be_used_for_comparison , thisGenFitnessTrain)
+    array_to_be_used_for_comparison= generate_data_for_comparison(thisGenFitnessValidation, thisGenFitnessTrain)
 
-    population = [x for _, x in sorted(zip(thisGenFitnessValidation, population))]
+    population = [x for _, x in sorted(zip(array_to_be_used_for_comparison, population))]
     sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
@@ -136,7 +136,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.6 : 
+        if coin > 0.7 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
@@ -144,7 +144,7 @@ def mutate(nextGenPopulation, populationSize):
                     temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
 
                     nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
-                    if nextGenPopulation[i][j] > 10 or nextGenPopulation[i][j] < -10 : 
+                    if math.fabs(nextGenPopulation[i][j]) > 10: 
                         nextGenPopulation[i][j] = float(nextGenPopulation[i][j]/10 )
                     # now we have to choose whether to add / subtract this thing from the 
 
