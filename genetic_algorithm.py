@@ -34,13 +34,13 @@ population = []
 try:
     with open('data.txt') as new_filename:
         population = json.load(new_filename)
-        population=population[10:]
-        for i in range(0,90):
-            person = []
-            for j in range(0, 11):
-                gene = random.uniform(-10, 10)
-                person.append(gene)
-            population.append(person)
+        # population=population[10:]
+        # for i in range(0,90):
+        #     person = []
+        #     for j in range(0, 11):
+        #         gene = random.uniform(-10, 10)
+        #         person.append(gene)
+        #     population.append(person)
     
 except:
     print("the file did not load :/")
@@ -61,8 +61,8 @@ for i in range(0, 6):
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
     nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
+    # geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
     population=nextGenPopulation
-    geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
     print(len(population))
     print(len(nextGenPopulation))
 

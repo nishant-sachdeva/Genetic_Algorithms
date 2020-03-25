@@ -175,18 +175,29 @@ def mutate(nextGenPopulation, populationSize):
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):
-    f2 = open("bestErrorVal.txt", "w+")
-    f3 = open("bestPopulation.txt", "w")
-    bestErrorVal=f2.read()
-    if len(bestErrorVal)!=0:
-        bestErrorVal=int(bestErrorVal)
-        if bestErrorVal>bestErrorValOfGeneration:
-            bestErrorVal=bestErrorValOfGeneration
-            f2.write(str(bestErrorVal))
-            f3.write(str(population))
-    else:
-        bestErrorVal = bestErrorValOfGeneration
-        f2.write(str(bestErrorVal))
-        f3.write(str(population))
+    # f4 = open("ErrorVals.txt", "a+")
+    # f2 = open("bestErrorVal.txt", "r+")
+    # f3 = open("bestPopulation.txt", "w")
+    # bestErrorVal=f2.read()
+    bestErrorVal = 9.222e38
+    temp=0
+    with open('bestErrorVal.txt', "r+") as f2:
+        with open('bestPopulation.txt', "wt") as f3:
+            with open('ErrorVals.txt', "w") as f4:
+                bestErrorVal=f2.load(f2)
+                if len(bestErrorVal)!=0:
+                    bestErrorVal=float(bestErrorVal[0])
+                    temp
+                    if bestErrorVal>bestErrorValOfGeneration:
+                        bestErrorVal=bestErrorValOfGeneration
+                        # f2.write(str(bestErrorVal))
+                        # f4.write(str(bestErrorVal))
+                        # f3.write(str(population))
+                else:
+                    f2.write(str(bestErrorValOfGeneration))
+                    f3.write(str(population))
+                    f4.write(str(bestErrorValOfGeneration)+"\n")
+
     f3.close()
     f2.close()
+    f4.close()
