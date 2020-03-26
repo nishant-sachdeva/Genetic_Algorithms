@@ -5,6 +5,8 @@ import math
 import numpy as np
 import json
 
+import notify
+
 def generate_data_for_comparison(validation_data,  train_data):
     validation_data = np.asarray(validation_data)
     
@@ -181,6 +183,9 @@ def storeBestGeneration(population, bestErrorValOfGeneration):
         bestErrorVal=json.load(f0)
     bestErrorVal = bestErrorVal[0]
     if bestErrorVal> bestErrorValOfGeneration:
+
+        notify.send_notfication("IMPROVEMENT FOUND")
+        
         bestErrorVal=[]
         bestErrorVal.append(bestErrorValOfGeneration)
         with open("bestErrorVal.txt", "w") as f0:
