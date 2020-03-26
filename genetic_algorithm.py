@@ -63,8 +63,8 @@ for i in range(0, 30):
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
     geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
     population=nextGenPopulation
-    print(len(population))
-    print(len(nextGenPopulation))
+    # print(len(population))
+    # print(len(nextGenPopulation))
 
 
 
@@ -72,7 +72,7 @@ for i in range(0, 30):
 try:
     with open('data.txt' , "w") as f:
         json.dump(population , f)
-        print(len(population))
+        # print(len(population))
 
 except:
     print("the file did not load :/")

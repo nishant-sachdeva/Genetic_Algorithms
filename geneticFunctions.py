@@ -21,7 +21,7 @@ def naturalSelection(population, populationSize, private_key):
     thisGenFitnessValidation=[]
     for i in range(0, populationSize):
         temp=client_moodle.get_errors(private_key, population[i])
-        print(str(i)+"th element's error for train and validation are " +str(temp[0])+" "+str(temp[1]))
+        print(str(i)+" => train : validation " +str(temp[0])+" "+str(temp[1]))
         thisGenFitnessTrain.append(temp[0])
         thisGenFitnessValidation.append(temp[1])
     # trainGuidelineUpper = 3625792
