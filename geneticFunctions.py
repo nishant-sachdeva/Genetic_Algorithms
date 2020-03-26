@@ -3,13 +3,14 @@ import random
 import statistics
 import math
 import numpy as np
+import json
 
 def generate_data_for_comparison(validation_data,  train_data):
     validation_data = np.asarray(validation_data)
     
     train_data = np.asarray(train_data)
 
-    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 3)  , train_data ) 
+    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , train_data ) 
 
     return return_array.tolist()
 
@@ -175,29 +176,45 @@ def mutate(nextGenPopulation, populationSize):
 
 
 def storeBestGeneration(population, bestErrorValOfGeneration):
+    bestErrorVal=[]
+    with open("bestErrorVal.txt", "r") as f0:
+        bestErrorVal=json.load(f0)
+    bestErrorVal = bestErrorVal[0]
+    if bestErrorVal> bestErrorValOfGeneration:
+        bestErrorVal=[]
+        bestErrorVal.append(bestErrorValOfGeneration)
+        with open("bestErrorVal.txt", "w") as f0:
+            json.dump(bestErrorVal, f0)
+        with open("bestPopulation.txt", "w") as f1:
+            json.dump(population, f1)
+        with open("ErrorVals.txt", "a") as f2:
+            json.dump(bestErrorVal, f2)
+    
+    
+    
     # f4 = open("ErrorVals.txt", "a+")
     # f2 = open("bestErrorVal.txt", "r+")
     # f3 = open("bestPopulation.txt", "w")
     # bestErrorVal=f2.read()
-    bestErrorVal = 9.222e38
-    temp=0
-    with open('bestErrorVal.txt', "r+") as f2:
-        with open('bestPopulation.txt', "wt") as f3:
-            with open('ErrorVals.txt', "w") as f4:
-                bestErrorVal=f2.load(f2)
-                if len(bestErrorVal)!=0:
-                    bestErrorVal=float(bestErrorVal[0])
-                    temp
-                    if bestErrorVal>bestErrorValOfGeneration:
-                        bestErrorVal=bestErrorValOfGeneration
-                        # f2.write(str(bestErrorVal))
-                        # f4.write(str(bestErrorVal))
-                        # f3.write(str(population))
-                else:
-                    f2.write(str(bestErrorValOfGeneration))
-                    f3.write(str(population))
-                    f4.write(str(bestErrorValOfGeneration)+"\n")
+    # bestErrorVal = 9.222e38
+    # temp=0
+    # with open('bestErrorVal.txt', "r+") as f2:
+    #     with open('bestPopulation.txt', "wt") as f3:
+    #         with open('ErrorVals.txt', "w") as f4:
+    #             bestErrorVal=f2.load(f2)
+    #             if len(bestErrorVal)!=0:
+    #                 bestErrorVal=float(bestErrorVal[0])
+    #                 temp
+    #                 if bestErrorVal>bestErrorValOfGeneration:
+    #                     bestErrorVal=bestErrorValOfGeneration
+    #                     # f2.write(str(bestErrorVal))
+    #                     # f4.write(str(bestErrorVal))
+    #                     # f3.write(str(population))
+    #             else:
+    #                 f2.write(str(bestErrorValOfGeneration))
+    #                 f3.write(str(population))
+    #                 f4.write(str(bestErrorValOfGeneration)+"\n")
 
-    f3.close()
-    f2.close()
-    f4.close()
+    # f3.close()
+    # f2.close()
+    # f4.close()
