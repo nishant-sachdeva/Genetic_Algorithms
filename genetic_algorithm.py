@@ -55,7 +55,7 @@ except:
 
 
 
-for i in range(0, 30):
+for i in range(0, 1):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
@@ -72,7 +72,8 @@ for i in range(0, 30):
 try:
     with open('data.txt' , "w") as f:
         json.dump(population , f)
-        # print(len(population))
+        print(len(population))
+        print("All is well that ends well :)")
 
 except:
     print("the file did not load :/")
