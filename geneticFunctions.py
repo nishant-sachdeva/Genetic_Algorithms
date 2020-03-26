@@ -184,8 +184,11 @@ def storeBestGeneration(population, bestErrorValOfGeneration):
     bestErrorVal = bestErrorVal[0]
     if bestErrorVal> bestErrorValOfGeneration:
 
-        notify.send_notfication("IMPROVEMENT FOUND")
-        
+        try:
+            notify.send_notfication("IMPROVEMENT FOUND")
+        except:
+            print("IMPROVEMENT FOUND")
+
         bestErrorVal=[]
         bestErrorVal.append(bestErrorValOfGeneration)
         with open("bestErrorVal.txt", "w") as f0:
