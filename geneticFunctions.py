@@ -12,7 +12,7 @@ def generate_data_for_comparison(validation_data,  train_data):
     
     train_data = np.asarray(train_data)
 
-    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , train_data ) 
+    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
     return return_array.tolist()
 
@@ -41,7 +41,7 @@ def naturalSelection(population, populationSize, private_key):
     # sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
-    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/2))]
+    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/5))]
 
     return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA
     ####median method
@@ -95,7 +95,7 @@ def mate(population, symmetricDifferenceIndex):
         b=random.randint(0, len(symmetricDifferenceIndex)-1)
     offSpring0=[]
     offSpring1=[]
-    #####uniform crossover
+    # #####uniform crossover
 
     for i in range(0, 11):
         coin = random.uniform(0, 1)
@@ -142,7 +142,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.8 : 
+        if coin > 0.85 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
