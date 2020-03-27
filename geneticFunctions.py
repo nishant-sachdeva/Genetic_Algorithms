@@ -35,7 +35,9 @@ def naturalSelection(population, populationSize, private_key):
     array_to_be_used_for_comparison= generate_data_for_comparison(thisGenFitnessValidation, thisGenFitnessTrain)
 
     population = [x for _, x in sorted(zip(array_to_be_used_for_comparison, population))]
-    sortedFitnessValArray = sorted(thisGenFitnessValidation) 
+    sortedFitnessValArray = sorted(array_to_be_used_for_comparison) 
+    
+    # sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
     fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/2))]
@@ -139,12 +141,12 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.7 : 
+        if coin > 0.8 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
                     # now we form an new gene basically
-                    temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
+                    temp = nextGenPopulation[i][j] * random.uniform(0.01 , 1.99) * random.choice([-1 , 1])
 
                     nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
                     if math.fabs(nextGenPopulation[i][j]) > 10: 
