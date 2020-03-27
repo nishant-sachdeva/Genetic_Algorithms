@@ -58,10 +58,10 @@ except:
 for i in range(0, 5):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
-    population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray=geneticFunctions.naturalSelection(population, populationSize, private_key)
+    population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)
     nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
-    geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0])
+    geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0], sortedFitnessValA)
     population=nextGenPopulation
     # print(len(population))
     # print(len(nextGenPopulation))

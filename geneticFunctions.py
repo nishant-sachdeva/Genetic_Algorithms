@@ -35,14 +35,15 @@ def naturalSelection(population, populationSize, private_key):
     array_to_be_used_for_comparison= generate_data_for_comparison(thisGenFitnessValidation, thisGenFitnessTrain)
 
     population = [x for _, x in sorted(zip(array_to_be_used_for_comparison, population))]
-    sortedFitnessValArray = sorted(array_to_be_used_for_comparison) 
+    sortedFitnessValArray = sorted(array_to_be_used_for_comparison)
+    sortedFitnessValA = sorted(thisGenFitnessValidation) 
     
     # sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
     fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/2))]
 
-    return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray
+    return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA
     ####median method
     
     # medTrainVal = statistics.median(thisGenFitnessTrain)
@@ -179,7 +180,7 @@ def mutate(nextGenPopulation, populationSize):
     # return nextGenPopulation
 
 
-def storeBestGeneration(population, bestErrorValOfGeneration):
+def storeBestGeneration(population, bestErrorValOfGeneration, printingVal):
     bestErrorVal=[]
     with open("bestErrorVal.txt", "r") as f0:
         bestErrorVal=json.load(f0)
@@ -193,12 +194,14 @@ def storeBestGeneration(population, bestErrorValOfGeneration):
 
         bestErrorVal=[]
         bestErrorVal.append(bestErrorValOfGeneration)
+        printVal=[]
+        printVal.append(printingVal)
         with open("bestErrorVal.txt", "w") as f0:
             json.dump(bestErrorVal, f0)
         with open("bestPopulation.txt", "w") as f1:
             json.dump(population, f1)
         with open("ErrorVals.txt", "a") as f2:
-            json.dump(bestErrorVal, f2)
+            json.dump(printVal, f2)
     
     
     
