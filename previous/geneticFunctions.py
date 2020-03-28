@@ -142,12 +142,12 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.6 : 
+        if coin > 0.8 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
                     # now we form an new gene basically
-                    temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
+                    temp = nextGenPopulation[i][j] * random.uniform(0.01 , 1.99) * random.choice([-1 , 1])
 
                     nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
                     if math.fabs(nextGenPopulation[i][j]) > 10: 
@@ -195,7 +195,7 @@ def storeBestGeneration(population, bestErrorValOfGeneration, printingVal):
         bestErrorVal=[]
         bestErrorVal.append(bestErrorValOfGeneration)
         printVal=[]
-        printVal.append(printingVal[0])
+        printVal.append(printingVal)
         with open("bestErrorVal.txt", "w") as f0:
             json.dump(bestErrorVal, f0)
         with open("bestPopulation.txt", "w") as f1:
