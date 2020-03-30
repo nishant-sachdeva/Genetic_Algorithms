@@ -32,7 +32,7 @@ private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 population = []
 
 try:
-    with open('bestPopulation.txt') as new_filename:
+    with open('data.txt') as new_filename:
         population = json.load(new_filename)
         # population=population[10:]
         # for i in range(0,90):
@@ -55,7 +55,7 @@ except:
 
 
 
-for i in range(0, 5):
+for i in range(0, 3):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)

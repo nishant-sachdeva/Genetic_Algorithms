@@ -14,6 +14,8 @@ def generate_data_for_comparison(validation_data,  train_data):
 
     return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
+    return_array = np.multiply(validation_data , validation_data)
+
     return return_array.tolist()
 
 
@@ -23,7 +25,7 @@ def naturalSelection(population, populationSize, private_key):
     thisGenFitnessValidation=[]
     for i in range(0, populationSize):
         temp=client_moodle.get_errors(private_key, population[i])
-        print(str(i)+" => train : validation " +str(temp[0])+" "+str(temp[1]))
+        print(str(i)+" => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])) )
         thisGenFitnessTrain.append(temp[0])
         thisGenFitnessValidation.append(temp[1])
     # trainGuidelineUpper = 3625792
@@ -142,7 +144,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.85 : 
+        if coin > 0.92 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
