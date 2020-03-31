@@ -5,16 +5,18 @@ import math
 import numpy as np
 import json
 
+import colorama
+from colorama import Fore, Style
 import notify
 
 def generate_data_for_comparison(validation_data,  train_data):
     validation_data = np.asarray(validation_data)
     
-    train_data = np.asarray(train_data)
+    # train_data = np.asarray(train_data)
 
-    return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
+    # return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
-    return_array = np.multiply(validation_data , validation_data)
+    return_array = np.multiply ( np.multiply(validation_data , validation_data) , validation_data )
 
     return return_array.tolist()
 
@@ -24,8 +26,12 @@ def naturalSelection(population, populationSize, private_key):
     thisGenFitnessTrain=[]
     thisGenFitnessValidation=[]
     for i in range(0, populationSize):
-        temp=client_moodle.get_errors(private_key, population[i])
-        print(str(i)+" => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])) )
+        temp = client_moodle.get_errors(private_key, population[i])
+        
+        print(population[i] , end=' ')
+        print(Fore.BLUE + " " + str(i) + " => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])))
+        print(Style.RESET_ALL)
+        
         thisGenFitnessTrain.append(temp[0])
         thisGenFitnessValidation.append(temp[1])
     # trainGuidelineUpper = 3625792
@@ -34,7 +40,7 @@ def naturalSelection(population, populationSize, private_key):
 
     #code to convert validation and train sets into numpy arrays and applying (y-x) ^3 * y onto them and returning a normal list into the requitsite function
 
-    array_to_be_used_for_comparison= generate_data_for_comparison(thisGenFitnessValidation, thisGenFitnessTrain)
+    array_to_be_used_for_comparison = generate_data_for_comparison(thisGenFitnessValidation, thisGenFitnessTrain)
 
     population = [x for _, x in sorted(zip(array_to_be_used_for_comparison, population))]
     sortedFitnessValArray = sorted(array_to_be_used_for_comparison)
@@ -144,10 +150,10 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.92 : 
+        if coin > 0.95 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
-                if another_coin > 0.35:
+                if another_coin > 0.45:
                     # now we form an new gene basically
                     temp = nextGenPopulation[i][j] * random.uniform(0.01 , 1.99) * random.choice([-1 , 1])
 
