@@ -3,7 +3,7 @@ import json
 
 
 
-with open('data.txt') as new_filename:
+with open('new_data.txt') as new_filename:
 	population = json.load(new_filename)
 
 

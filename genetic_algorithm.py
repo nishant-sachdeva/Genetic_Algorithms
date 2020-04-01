@@ -32,7 +32,7 @@ private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 population = []
 
 try:
-    with open('data.txt') as new_filename:
+    with open('new_data.txt') as new_filename:
         population = json.load(new_filename)
         # population=population[10:]
         # for i in range(0,90):
@@ -55,7 +55,7 @@ except:
 
 
 
-for i in range(0, 4):
+for i in range(0, 5):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)
@@ -70,7 +70,7 @@ for i in range(0, 4):
 
 # I have to find a way to make this population persistent
 try:
-    with open('data.txt' , "w") as f:
+    with open('new_data.txt' , "w") as f:
         json.dump(population , f)
         print(len(population))
         print("All is well that ends well :)")

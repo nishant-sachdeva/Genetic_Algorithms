@@ -16,7 +16,7 @@ def generate_data_for_comparison(validation_data,  train_data):
 
     # return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
-    return_array = np.multiply ( np.power(validation_data , 3)  , np.power(train_data , 1)  )
+    return_array = np.multiply ( np.power(validation_data , 5)  , np.power(train_data , 2)  )
 
     return return_array.tolist()
 
@@ -153,11 +153,12 @@ def mutate(nextGenPopulation, populationSize):
         if coin > 0.9 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
-                if another_coin > 0.45:
+                if another_coin > 0.35:
                     # now we form an new gene basically
-                    temp = nextGenPopulation[i][j] * random.uniform(0.01 , 1.99) * random.choice([-1 , 1])
+                    # temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
 
-                    nextGenPopulation[i][j]  = nextGenPopulation[i][j] + temp 
+                    nextGenPopulation[i][j]  = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1)
+
                     if math.fabs(nextGenPopulation[i][j]) > 10: 
                         nextGenPopulation[i][j] = float(nextGenPopulation[i][j]/10 )
                     # now we have to choose whether to add / subtract this thing from the 
