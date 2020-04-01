@@ -10,7 +10,7 @@ with open('data.txt') as new_filename:
 private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 
 
-for dude in len(population):
+for dude in range( len(population) ) :
 	try:
 		temp = client_moodle.submit(private_key, population[dude])
 		print(str(dude) + " " + temp)

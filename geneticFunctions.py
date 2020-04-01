@@ -12,11 +12,11 @@ import notify
 def generate_data_for_comparison(validation_data,  train_data):
     validation_data = np.asarray(validation_data)
     
-    # train_data = np.asarray(train_data)
+    train_data = np.asarray(train_data)
 
     # return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
-    return_array = np.multiply ( np.multiply(validation_data , validation_data) , validation_data )
+    return_array = np.multiply ( np.power(validation_data , 3)  , np.power(train_data , 1)  )
 
     return return_array.tolist()
 
@@ -28,9 +28,9 @@ def naturalSelection(population, populationSize, private_key):
     for i in range(0, populationSize):
         temp = client_moodle.get_errors(private_key, population[i])
         
-        print(population[i] , end=' ')
-        print(Fore.BLUE + " " + str(i) + " => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])))
-        print(Style.RESET_ALL)
+        # print(population[i] , end=' ')
+        print( str(i) + " => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])))
+        # print(Style.RESET_ALL)
         
         thisGenFitnessTrain.append(temp[0])
         thisGenFitnessValidation.append(temp[1])
@@ -150,7 +150,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.95 : 
+        if coin > 0.9 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.45:

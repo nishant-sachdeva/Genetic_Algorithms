@@ -14572,3 +14572,1039 @@ Generation: 1
 [0m
 100
 All is well that ends well :)
+
+
+
+RUN ON APR 1 at 11 : 52 AM :
+
+
+Generation: 1
+[34m 0 => train : validation 261001 262648
+[0m
+[34m 1 => train : validation 323178 326399
+[0m
+[34m 2 => train : validation 355710 359423
+[0m
+[34m 3 => train : validation 3114343 3115870
+[0m
+[34m 4 => train : validation 310609 305688
+[0m
+[34m 5 => train : validation 309367 314938
+[0m
+[34m 6 => train : validation 371714 365189
+[0m
+[34m 7 => train : validation 383789 375837
+[0m
+[34m 8 => train : validation 3112796 3115945
+[0m
+[34m 9 => train : validation 3022071 3025698
+[0m
+[34m 10 => train : validation 399669 409895
+[0m
+[34m 11 => train : validation 329385 340883
+[0m
+[34m 12 => train : validation 281066 296007
+[0m
+[34m 13 => train : validation 325932 311906
+[0m
+[34m 14 => train : validation 326458 312198
+[0m
+[34m 15 => train : validation 377083 395642
+[0m
+[34m 16 => train : validation 375685 394788
+[0m
+[34m 17 => train : validation 311775 290779
+[0m
+[34m 18 => train : validation 293625 269692
+[0m
+[34m 19 => train : validation 1003064 989773
+[0m
+[34m 20 => train : validation 272338 303207
+[0m
+[34m 21 => train : validation 453477 422975
+[0m
+[34m 22 => train : validation 3320851 3308893
+[0m
+[34m 23 => train : validation 326887 288341
+[0m
+[34m 24 => train : validation 3043666 3030711
+[0m
+[34m 25 => train : validation 372157 333742
+[0m
+[34m 26 => train : validation 270461 316971
+[0m
+[34m 27 => train : validation 339708 295430
+[0m
+[34m 28 => train : validation 421695 461967
+[0m
+[34m 29 => train : validation 263748 316876
+[0m
+[34m 30 => train : validation 378099 332432
+[0m
+[34m 31 => train : validation 226124 285588
+[0m
+[34m 32 => train : validation 387873 341850
+[0m
+[34m 33 => train : validation 1005401 976783
+[0m
+[34m 34 => train : validation 393086 442554
+[0m
+[34m 35 => train : validation 307686 241868
+[0m
+[34m 36 => train : validation 360602 299583
+[0m
+[34m 37 => train : validation 1741689 1712548
+[0m
+[34m 38 => train : validation 324107 392647
+[0m
+[34m 39 => train : validation 365664 444204
+[0m
+[34m 40 => train : validation 217667 328572
+[0m
+[34m 41 => train : validation 413283 330419
+[0m
+[34m 42 => train : validation 397636 482563
+[0m
+[34m 43 => train : validation 525100 599247
+[0m
+[34m 44 => train : validation 408153 320990
+[0m
+[34m 45 => train : validation 215438 340250
+[0m
+[34m 46 => train : validation 427484 336407
+[0m
+[34m 47 => train : validation 415509 319909
+[0m
+[34m 48 => train : validation 1578666 1528202
+[0m
+[34m 49 => train : validation 455675 360946
+[0m
+[34m 50 => train : validation 407711 508391
+[0m
+[34m 51 => train : validation 209953 350367
+[0m
+[34m 52 => train : validation 939256 1006532
+[0m
+[34m 53 => train : validation 259801 390361
+[0m
+[34m 54 => train : validation 446827 347187
+[0m
+[34m 55 => train : validation 428338 324878
+[0m
+[34m 56 => train : validation 442718 340020
+[0m
+[34m 57 => train : validation 473928 371882
+[0m
+[34m 58 => train : validation 208768 367057
+[0m
+[34m 59 => train : validation 466507 359156
+[0m
+[34m 60 => train : validation 220029 376992
+[0m
+[34m 61 => train : validation 2997691 3041785
+[0m
+[34m 62 => train : validation 498011 389643
+[0m
+[34m 63 => train : validation 479684 365297
+[0m
+[34m 64 => train : validation 1214227 1139379
+[0m
+[34m 65 => train : validation 568060 453477
+[0m
+[34m 66 => train : validation 510530 386657
+[0m
+[34m 67 => train : validation 211360 404160
+[0m
+[34m 68 => train : validation 387837 532217
+[0m
+[34m 69 => train : validation 582560 464411
+[0m
+[34m 70 => train : validation 211535 413219
+[0m
+[34m 71 => train : validation 554005 429165
+[0m
+[34m 72 => train : validation 212542 414322
+[0m
+[34m 73 => train : validation 3160065 3105997
+[0m
+[34m 74 => train : validation 611091 486028
+[0m
+[34m 75 => train : validation 965174 858288
+[0m
+[34m 76 => train : validation 797574 674625
+[0m
+[34m 77 => train : validation 705839 563063
+[0m
+[34m 78 => train : validation 763787 623957
+[0m
+[34m 79 => train : validation 819880 680234
+[0m
+[34m 80 => train : validation 277346 548108
+[0m
+[34m 81 => train : validation 270218 587360
+[0m
+[34m 82 => train : validation 435277 689856
+[0m
+[34m 83 => train : validation 396184 844096
+[0m
+[34m 84 => train : validation 403262 861045
+[0m
+[34m 85 => train : validation 442879 967954
+[0m
+[34m 86 => train : validation 533519 1124848
+[0m
+[34m 87 => train : validation 3284200 3558059
+[0m
+[34m 88 => train : validation 10567583 12349256
+[0m
+[34m 89 => train : validation 10424713 12261894
+[0m
+[34m 90 => train : validation 10969521 12890569
+[0m
+[34m 91 => train : validation 11663065 14115067
+[0m
+[34m 92 => train : validation 6471376 10198617
+[0m
+[34m 93 => train : validation 6126669 10166376
+[0m
+[34m 94 => train : validation 8920178 13071450
+[0m
+[34m 95 => train : validation 9604150 13669357
+[0m
+[34m 96 => train : validation 9824043 14515682
+[0m
+[34m 97 => train : validation 15932874 20218941
+[0m
+[34m 98 => train : validation 10606179 16230192
+[0m
+[34m 99 => train : validation 9645062 15721879
+[0m
+100
+All is well that ends well :)
+
+
+RUN AT 11 : 56 AM
+
+
+
+Generation: 1
+0 => train : validation 2071726 2188421
+1 => train : validation 6291755 7182428
+2 => train : validation 221981 299149
+3 => train : validation 293625 269692
+4 => train : validation 281066 296007
+5 => train : validation 11183924 12971133
+6 => train : validation 2951591 3100134
+7 => train : validation 221764 304118
+8 => train : validation 277343 362388
+9 => train : validation 422156 920993
+10 => train : validation 214101 332217
+11 => train : validation 357183 317727
+12 => train : validation 278326 296083
+13 => train : validation 266352 296337
+14 => train : validation 287001 303510
+15 => train : validation 9417824 14565332
+16 => train : validation 312349 296653
+17 => train : validation 1764056 3110071
+18 => train : validation 1939375 1794633
+19 => train : validation 5962068 9450690
+20 => train : validation 245746 290848
+21 => train : validation 299338 238141
+22 => train : validation 224018 339712
+23 => train : validation 205723 358564
+24 => train : validation 334177 609280
+25 => train : validation 1089717 1009755
+26 => train : validation 2622384 4609079
+27 => train : validation 1012235 2012056
+28 => train : validation 3195219 3332971
+29 => train : validation 1958775 3515786
+30 => train : validation 321936 650707
+31 => train : validation 208798 375105
+32 => train : validation 338472 372756
+33 => train : validation 351750 307305
+34 => train : validation 219102 325430
+35 => train : validation 14368110 17082728
+36 => train : validation 219281 297431
+37 => train : validation 399428 866742
+38 => train : validation 208119 354913
+39 => train : validation 295300 390349
+40 => train : validation 7471493 9970638
+41 => train : validation 307855 241874
+42 => train : validation 18454642 22180796
+43 => train : validation 20026408 24805769
+44 => train : validation 2687622 2769961
+45 => train : validation 7755285 8971418
+46 => train : validation 14421341 17116899
+47 => train : validation 268111 356830
+48 => train : validation 295173 265943
+49 => train : validation 315455 296322
+50 => train : validation 212922 319897
+51 => train : validation 311597 325090
+52 => train : validation 346258 299898
+53 => train : validation 245666 298419
+54 => train : validation 215109 341247
+55 => train : validation 305116 252736
+56 => train : validation 471333 999168
+57 => train : validation 281066 296007
+58 => train : validation 382825 461424
+59 => train : validation 14842299 18219563
+60 => train : validation 817424 1615638
+61 => train : validation 21356278 29119204
+62 => train : validation 1294900 1143376
+63 => train : validation 7520186 8811174
+64 => train : validation 214591 315608
+65 => train : validation 21786086 32282351
+66 => train : validation 210059 350009
+67 => train : validation 271414 301016
+68 => train : validation 5058432 7201002
+69 => train : validation 1780600 3108286
+70 => train : validation 220747 346905
+71 => train : validation 263979 269922
+72 => train : validation 399897 320369
+73 => train : validation 315155 307759
+74 => train : validation 19960597 27320491
+75 => train : validation 3241253 6036721
+76 => train : validation 215776 309385
+77 => train : validation 25982463 32547605
+78 => train : validation 343419 323023
+79 => train : validation 284387 276441
+80 => train : validation 18523361 28129848
+81 => train : validation 1730313 2881888
+82 => train : validation 31705590 46092029
+83 => train : validation 303453 288773
+84 => train : validation 223494 374262
+85 => train : validation 7690193 8871929
+86 => train : validation 17993266 21801641
+87 => train : validation 209971 377178
+88 => train : validation 290188 300064
+89 => train : validation 1296972 2428753
+90 => train : validation 293541 605346
+91 => train : validation 8729042 13166653
+92 => train : validation 215488 340150
+93 => train : validation 5900327 8932232
+94 => train : validation 248924 288457
+95 => train : validation 18911218 27100149
+96 => train : validation 4294892 7738567
+97 => train : validation 448505 340425
+98 => train : validation 227940 290810
+99 => train : validation 272752 307697
+Generation: 2
+0 => train : validation 406143 284273
+1 => train : validation 307855 241874
+2 => train : validation 305116 252736
+3 => train : validation 263979 269922
+4 => train : validation 295173 265943
+5 => train : validation 227940 290810
+6 => train : validation 293625 269692
+7 => train : validation 219281 297431
+8 => train : validation 221981 299149
+9 => train : validation 248924 288457
+10 => train : validation 254987 286049
+11 => train : validation 17554336 20533103
+12 => train : validation 227371 387801
+13 => train : validation 226755 269288
+14 => train : validation 293625 269692
+15 => train : validation 278326 296083
+16 => train : validation 294943 269595
+17 => train : validation 277696 297127
+18 => train : validation 218788 377593
+19 => train : validation 382418 287864
+20 => train : validation 276521 388584
+21 => train : validation 237233 255380
+22 => train : validation 230433 261356
+23 => train : validation 248701 338193
+24 => train : validation 258383 300855
+25 => train : validation 1020724 1462196
+26 => train : validation 281360 263646
+27 => train : validation 296262 298378
+28 => train : validation 306115 264950
+29 => train : validation 221013 303258
+30 => train : validation 221703 294868
+31 => train : validation 290193 250229
+32 => train : validation 222193 303711
+33 => train : validation 298869 238148
+34 => train : validation 257110 263330
+35 => train : validation 208471 367734
+36 => train : validation 208938 345170
+37 => train : validation 297574 269921
+38 => train : validation 208985 391673
+39 => train : validation 484253 357392
+40 => train : validation 246894 331857
+41 => train : validation 335051 324600
+42 => train : validation 441956 345696
+43 => train : validation 276065 264342
+44 => train : validation 214540 325338
+45 => train : validation 347257 279977
+46 => train : validation 286729 290302
+47 => train : validation 256113 293613
+48 => train : validation 219091 297600
+49 => train : validation 297276 268164
+50 => train : validation 302706 247844
+51 => train : validation 239698 305721
+52 => train : validation 209259 339332
+53 => train : validation 603133 611777
+54 => train : validation 454203 390105
+55 => train : validation 241449 296623
+56 => train : validation 284387 276441
+57 => train : validation 281066 296007
+58 => train : validation 219814 380527
+59 => train : validation 7134567 10094201
+60 => train : validation 208953 321908
+61 => train : validation 290695 271389
+62 => train : validation 216132 308798
+63 => train : validation 281064 297277
+64 => train : validation 13161818 19258572
+65 => train : validation 219254 297979
+66 => train : validation 214111 325707
+67 => train : validation 370256 290995
+68 => train : validation 216013 311205
+69 => train : validation 327368 282421
+70 => train : validation 283256 258486
+71 => train : validation 222947 369605
+72 => train : validation 213772 328977
+73 => train : validation 216597 295302
+74 => train : validation 215095 309837
+75 => train : validation 248593 292889
+76 => train : validation 294469 269499
+77 => train : validation 283780 276959
+78 => train : validation 769184 647293
+79 => train : validation 224657 311645
+80 => train : validation 1468645 1357406
+81 => train : validation 267919 318064
+82 => train : validation 257367 291406
+83 => train : validation 277877 278160
+84 => train : validation 247985 271518
+85 => train : validation 349444 273986
+86 => train : validation 303870 270627
+87 => train : validation 207863 329000
+88 => train : validation 281739 296299
+89 => train : validation 35329114 44598819
+90 => train : validation 324068 252133
+91 => train : validation 259204 286083
+92 => train : validation 256798 309363
+93 => train : validation 349980 331624
+94 => train : validation 245931 324300
+95 => train : validation 230410 277492
+96 => train : validation 218040 326783
+97 => train : validation 374444 323651
+98 => train : validation 324209 269770
+99 => train : validation 207777 375509
+Generation: 3
+0 => train : validation 237233 255380
+1 => train : validation 298869 238148
+2 => train : validation 230433 261356
+3 => train : validation 307855 241874
+4 => train : validation 226755 269288
+5 => train : validation 290193 250229
+6 => train : validation 273664 256805
+7 => train : validation 257110 263330
+8 => train : validation 283256 258486
+9 => train : validation 230410 277492
+10 => train : validation 214513 320010
+11 => train : validation 492109 366780
+12 => train : validation 375873 279258
+13 => train : validation 247047 271976
+14 => train : validation 300944 238404
+15 => train : validation 286603 248582
+16 => train : validation 332774 256702
+17 => train : validation 233790 257841
+18 => train : validation 266274 248851
+19 => train : validation 16794404 24739108
+20 => train : validation 220594 297237
+21 => train : validation 259265 262499
+22 => train : validation 580993 451283
+23 => train : validation 202757 345757
+24 => train : validation 22406672 27742902
+25 => train : validation 232438 279793
+26 => train : validation 203958 378171
+27 => train : validation 13330402 16689233
+28 => train : validation 308443 241889
+29 => train : validation 8101670 9461173
+30 => train : validation 384679 416259
+31 => train : validation 33644805 48231701
+32 => train : validation 281132 263757
+33 => train : validation 290890 250541
+34 => train : validation 258717 255863
+35 => train : validation 242764 254976
+36 => train : validation 223118 289799
+37 => train : validation 322901 253278
+38 => train : validation 216019 309591
+39 => train : validation 239294 264252
+40 => train : validation 482211 371322
+41 => train : validation 204023 378682
+42 => train : validation 228582 288166
+43 => train : validation 5916177 6829219
+44 => train : validation 218199 310968
+45 => train : validation 414683 316638
+46 => train : validation 306120 241697
+47 => train : validation 233605 256718
+48 => train : validation 268209 251499
+49 => train : validation 265885 274448
+50 => train : validation 281206 263684
+51 => train : validation 237347 255297
+52 => train : validation 217213 290564
+53 => train : validation 327501 291606
+54 => train : validation 447292 349013
+55 => train : validation 206312 355793
+56 => train : validation 271575 264064
+57 => train : validation 328135 253042
+58 => train : validation 380554 331373
+59 => train : validation 37132149 46841410
+60 => train : validation 265842 234836
+61 => train : validation 12228450 17442119
+62 => train : validation 310171 274232
+63 => train : validation 215242 352453
+64 => train : validation 238204 329150
+65 => train : validation 387315 331905
+66 => train : validation 225265 419493
+67 => train : validation 458895 352467
+68 => train : validation 256900 263380
+69 => train : validation 448219 314816
+70 => train : validation 209905 413354
+71 => train : validation 471916 362558
+72 => train : validation 580402 470795
+73 => train : validation 310816 252117
+74 => train : validation 14218184 20353113
+75 => train : validation 226755 269288
+76 => train : validation 219794 330703
+77 => train : validation 380074 298591
+78 => train : validation 498474 420230
+79 => train : validation 4442192 4778335
+80 => train : validation 247092 299123
+81 => train : validation 419986 334240
+82 => train : validation 252176 262697
+83 => train : validation 305977 241686
+84 => train : validation 288865 234628
+85 => train : validation 242875 254962
+86 => train : validation 214827 352655
+87 => train : validation 241117 261819
+88 => train : validation 298563 235348
+89 => train : validation 230367 263367
+90 => train : validation 282199 258204
+91 => train : validation 228537 290421
+92 => train : validation 223788 292082
+93 => train : validation 21088319 27719546
+94 => train : validation 289609 274580
+95 => train : validation 227908 289668
+96 => train : validation 222555 296297
+97 => train : validation 317729 247560
+98 => train : validation 581970 475903
+99 => train : validation 382075 336814
+Generation: 4
+0 => train : validation 265842 234836
+1 => train : validation 288865 234628
+2 => train : validation 298563 235348
+3 => train : validation 237347 255297
+4 => train : validation 237233 255380
+5 => train : validation 233605 256718
+6 => train : validation 233790 257841
+7 => train : validation 242764 254976
+8 => train : validation 242875 254962
+9 => train : validation 298869 238148
+10 => train : validation 280389 229832
+11 => train : validation 231370 258529
+12 => train : validation 404020 308573
+13 => train : validation 271983 300917
+14 => train : validation 8085806 9896892
+15 => train : validation 258429 255979
+16 => train : validation 322564 251366
+17 => train : validation 237111 248206
+18 => train : validation 359913 370896
+19 => train : validation 367134 338168
+20 => train : validation 222939 268559
+21 => train : validation 243037 254708
+22 => train : validation 207577 351433
+23 => train : validation 395167 317309
+24 => train : validation 230433 261356
+25 => train : validation 959397 1675706
+26 => train : validation 501350 372205
+27 => train : validation 224212 363332
+28 => train : validation 598994 704693
+29 => train : validation 7127021 8088056
+30 => train : validation 230587 264878
+31 => train : validation 336847 257372
+32 => train : validation 246716 258569
+33 => train : validation 232807 259680
+34 => train : validation 242897 254919
+35 => train : validation 406651 298793
+36 => train : validation 236655 258009
+37 => train : validation 302458 240999
+38 => train : validation 279323 234028
+39 => train : validation 222557 360124
+40 => train : validation 216677 295219
+41 => train : validation 296214 261239
+42 => train : validation 227685 400379
+43 => train : validation 291242 234475
+44 => train : validation 230365 264672
+45 => train : validation 330630 256624
+46 => train : validation 242126 258841
+47 => train : validation 333104 253722
+48 => train : validation 217011 293699
+49 => train : validation 18082434 25901918
+50 => train : validation 213823 292774
+51 => train : validation 289316 258062
+52 => train : validation 236779 258092
+53 => train : validation 364564 294600
+54 => train : validation 215162 335077
+55 => train : validation 591319 456767
+56 => train : validation 9135052 14173493
+57 => train : validation 246	494 258735
+58 => train : validation 8259151 10064971
+59 => train : validation 227539 263951
+60 => train : validation 452023 343348
+61 => train : validation 205489 332704
+62 => train : validation 9809982 12052642
+63 => train : validation 230756 263355
+64 => train : validation 256887 256881
+65 => train : validation 244282 253511
+66 => train : validation 281327 260509
+67 => train : validation 223172 284115
+68 => train : validation 306080 241694
+69 => train : validation 298909 238150
+70 => train : validation 215182 350522
+71 => train : validation 1035905 932455
+72 => train : validation 932360 845365
+73 => train : validation 230433 261356
+74 => train : validation 237347 255297
+75 => train : validation 306120 241697
+76 => train : validation 254972 239460
+77 => train : validation 322099 248394
+78 => train : validation 306433 241676
+79 => train : validation 307533 241881
+80 => train : validation 11628841 14377021
+81 => train : validation 307489 241875
+82 => train : validation 239587 264158
+83 => train : validation 240010 255253
+84 => train : validation 350183 297715
+85 => train : validation 215896 310479
+86 => train : validation 300944 238404
+87 => train : validation 298869 238148
+88 => train : validation 221874 353973
+89 => train : validation 345582 270703
+90 => train : validation 391470 338944
+91 => train : validation 277643 274124
+92 => train : validation 242897 254919
+93 => train : validation 237233 255380
+94 => train : validation 322617 248512
+95 => train : validation 231161 261475
+96 => train : validation 224235 263911
+97 => train : validation 244375 253432
+98 => train : validation 286563 234860
+99 => train : validation 301291 235739
+100
+All is well that ends well :)
+
+
+
+
+CODE RUN AT 12:02 PM
+
+
+Generation: 1
+0 => train : validation 280389 229832
+1 => train : validation 7474302 11053757
+2 => train : validation 254972 239460
+3 => train : validation 279323 234028
+4 => train : validation 237111 248206
+5 => train : validation 286563 234860
+6 => train : validation 288865 234628
+7 => train : validation 291242 234475
+8 => train : validation 2137261 2309560
+9 => train : validation 301291 235739
+10 => train : validation 16512998 21084061
+11 => train : validation 885887 687155
+12 => train : validation 283115 241598
+13 => train : validation 227847 265853
+14 => train : validation 237233 255380
+15 => train : validation 244375 253432
+16 => train : validation 232438 258269
+17 => train : validation 236135 255627
+18 => train : validation 218214 280816
+19 => train : validation 339303 257787
+20 => train : validation 291139 234487
+21 => train : validation 301420 235765
+22 => train : validation 292950 234469
+23 => train : validation 238662 257397
+24 => train : validation 24312285 30404400
+25 => train : validation 10018970 14565610
+26 => train : validation 293919 235565
+27 => train : validation 293487 234378
+28 => train : validation 301418 235765
+29 => train : validation 295228 236744
+30 => train : validation 225292 261833
+31 => train : validation 19328960 24434761
+32 => train : validation 301291 235739
+33 => train : validation 280389 229832
+34 => train : validation 258694 240365
+35 => train : validation 234825 256150
+36 => train : validation 375668 321268
+37 => train : validation 3571855 4450185
+38 => train : validation 308381 250466
+39 => train : validation 857301 756260
+40 => train : validation 288865 234628
+41 => train : validation 286563 234860
+42 => train : validation 239271 246282
+43 => train : validation 303744 230437
+44 => train : validation 293591 234368
+45 => train : validation 296195 235430
+46 => train : validation 222451 268096
+47 => train : validation 331534 256574
+48 => train : validation 231330 258575
+49 => train : validation 288904 234623
+50 => train : validation 242785 254976
+51 => train : validation 292532 234560
+52 => train : validation 306549 238021
+53 => train : validation 240107 256056
+54 => train : validation 235889 256912
+55 => train : validation 646270 467929
+56 => train : validation 233605 256718
+57 => train : validation 288865 234628
+58 => train : validation 238690 253848
+59 => train : validation 9763917 11867559
+60 => train : validation 237273 248054
+61 => train : validation 8129164 13071415
+62 => train : validation 291783 234674
+63 => train : validation 230927 263061
+64 => train : validation 309116 238440
+65 => train : validation 275444 234162
+66 => train : validation 221874 266706
+67 => train : validation 337579 257412
+68 => train : validation 326993 252596
+69 => train : validation 227490 267796
+70 => train : validation 243529 254686
+71 => train : validation 234603 256530
+72 => train : validation 237708 247974
+73 => train : validation 298814 239321
+74 => train : validation 218637 291505
+75 => train : validation 376326 305419
+76 => train : validation 9254162 10977198
+77 => train : validation 233636 257999
+78 => train : validation 5000202 7746234
+79 => train : validation 241686 256987
+80 => train : validation 214510 323014
+81 => train : validation 237662 255110
+82 => train : validation 265868 234297
+83 => train : validation 238854 257555
+84 => train : validation 240746 254466
+85 => train : validation 234611 257374
+86 => train : validation 292016 234659
+87 => train : validation 11563210 16184524
+88 => train : validation 2134374 3504802
+89 => train : validation 238385 254115
+90 => train : validation 265842 234836
+91 => train : validation 298563 235348
+92 => train : validation 15228587 21279305
+93 => train : validation 237850 259083
+94 => train : validation 237233 255380
+95 => train : validation 244510 253378
+96 => train : validation 300647 235684
+97 => train : validation 35774194 46250590
+98 => train : validation 528275 378809
+99 => train : validation 222395 268241
+Generation: 2
+0 => train : validation 280389 229832
+1 => train : validation 280389 229832
+2 => train : validation 265868 234297
+3 => train : validation 3977618 4553574
+4 => train : validation 254972 239460
+5 => train : validation 275444 234162
+6 => train : validation 239271 246282
+7 => train : validation 279323 234028
+8 => train : validation 258694 240365
+9 => train : validation 237273 248054
+10 => train : validation 286947 234747
+11 => train : validation 288456 234706
+12 => train : validation 257456 248333
+13 => train : validation 225795 278518
+14 => train : validation 222613 267561
+15 => train : validation 320124 245737
+16 => train : validation 285681 238909
+17 => train : validation 232958 250435
+18 => train : validation 233705 250715
+19 => train : validation 288904 234623
+20 => train : validation 293487 234378
+21 => train : validation 238045 247885
+22 => train : validation 252515 239131
+23 => train : validation 247245 239181
+24 => train : validation 288904 234623
+25 => train : validation 9998319 15105315
+26 => train : validation 439434 311033
+27 => train : validation 254929 238546
+28 => train : validation 320112 251642
+29 => train : validation 227392 260472
+30 => train : validation 275737 225121
+31 => train : validation 316195 240217
+32 => train : validation 346710 284471
+33 => train : validation 481569 367738
+34 => train : validation 261652 236417
+35 => train : validation 290153 239231
+36 => train : validation 266515 230259
+37 => train : validation 253266 238968
+38 => train : validation 280621 229879
+39 => train : validation 237498 247989
+40 => train : validation 263586 243266
+41 => train : validation 254317 228200
+42 => train : validation 237863 244340
+43 => train : validation 305990 232840
+44 => train : validation 307995 233220
+45 => train : validation 276775 227560
+46 => train : validation 274827 230605
+47 => train : validation 243185 241153
+48 => train : validation 391875 317618
+49 => train : validation 234176 281918
+50 => train : validation 236520 249581
+51 => train : validation 291121 234479
+52 => train : validation 220876 288260
+53 => train : validation 407461 333597
+54 => train : validation 258311 234607
+55 => train : validation 2178914 4019954
+56 => train : validation 296149 235793
+57 => train : validation 273439 228748
+58 => train : validation 280389 229832
+59 => train : validation 288865 234628
+60 => train : validation 230913 248576
+61 => train : validation 298631 235754
+62 => train : validation 5995152 8940329
+63 => train : validation 268722 229274
+64 => train : validation 250065 239098
+65 => train : validation 301116 240902
+66 => train : validation 306546 242635
+67 => train : validation 250514 238164
+68 => train : validation 240503 244143
+69 => train : validation 274646 230570
+70 => train : validation 291743 241930
+71 => train : validation 237078 242857
+72 => train : validation 266479 230274
+73 => train : validation 250921 240174
+74 => train : validation 258979 234284
+75 => train : validation 293604 235574
+76 => train : validation 12125140 14666121
+77 => train : validation 270536 229038
+78 => train : validation 217103 306269
+79 => train : validation 443979 341386
+80 => train : validation 465846 321403
+81 => train : validation 301284 236974
+82 => train : validation 366085 301852
+83 => train : validation 268371 257452
+84 => train : validation 278398 230267
+85 => train : validation 291082 234484
+86 => train : validation 251635 237477
+87 => train : validation 247454 238610
+88 => train : validation 227093 267801
+89 => train : validation 14604528 20802228
+90 => train : validation 260442 239561
+91 => train : validation 561383 853406
+92 => train : validation 237708 247974
+93 => train : validation 239271 246282
+94 => train : validation 249301 241401
+95 => train : validation 268568 229606
+96 => train : validation 317057 252896
+97 => train : validation 276056 241768
+98 => train : validation 288865 234628
+99 => train : validation 280389 229832
+Generation: 3
+0 => train : validation 254317 228200
+1 => train : validation 275737 225121
+2 => train : validation 268722 229274
+3 => train : validation 270536 229038
+4 => train : validation 339488 262722
+5 => train : validation 266515 230259
+6 => train : validation 266479 230274
+7 => train : validation 276775 227560
+8 => train : validation 273439 228748
+9 => train : validation 11035450 16140569
+10 => train : validation 266515 230259
+11 => train : validation 270536 229038
+12 => train : validation 1022724 1655151
+13 => train : validation 247244 239181
+14 => train : validation 293589 234368
+15 => train : validation 231374 249626
+16 => train : validation 268568 229606
+17 => train : validation 270536 229038
+18 => train : validation 275481 230579
+19 => train : validation 268212 229491
+20 => train : validation 322701 252008
+21 => train : validation 223282 256158
+22 => train : validation 1191319 999776
+23 => train : validation 224216 254047
+24 => train : validation 242242 243260
+25 => train : validation 269245 229804
+26 => train : validation 275250 230541
+27 => train : validation 277973 230313
+28 => train : validation 247568 226621
+29 => train : validation 280886 242813
+30 => train : validation 325209 252498
+31 => train : validation 227947 246543
+32 => train : validation 306098 238251
+33 => train : validation 234963 243236
+34 => train : validation 268400 229660
+35 => train : validation 272739 231127
+36 => train : validation 242778 241147
+37 => train : validation 286068 226309
+38 => train : validation 278398 230267
+39 => train : validation 266515 230259
+40 => train : validation 268712 241836
+41 => train : validation 233414 246830
+42 => train : validation 274911 230601
+43 => train : validation 245670 236986
+44 => train : validation 268535 229619
+45 => train : validation 245755 240519
+46 => train : validation 298777 240878
+47 => train : validation 2956065 3642091
+48 => train : validation 275705 228243
+49 => train : validation 268363 229675
+50 => train : validation 272375 229058
+51 => train : validation 286120 240309
+52 => train : validation 245595 239457
+53 => train : validation 264143 234552
+54 => train : validation 268060 229771
+55 => train : validation 252219 237343
+56 => train : validation 270096 229108
+57 => train : validation 280389 229832
+58 => train : validation 254317 228200
+59 => train : validation 270536 229038
+60 => train : validation 241153 238955
+61 => train : validation 281418 230746
+62 => train : validation 317617 250511
+63 => train : validation 243174 225478
+64 => train : validation 241449 232390
+65 => train : validation 298633 235755
+66 => train : validation 240092 239369
+67 => train : validation 275509 228905
+68 => train : validation 247807 227326
+69 => train : validation 12957663 16115600
+70 => train : validation 301284 240905
+71 => train : validation 30324541 36937908
+72 => train : validation 308920 242032
+73 => train : validation 247807 227326
+74 => train : validation 247721 239116
+75 => train : validation 273070 228850
+76 => train : validation 298777 240878
+77 => train : validation 252612 229218
+78 => train : validation 273439 228748
+79 => train : validation 275324 229769
+80 => train : validation 293638 234364
+81 => train : validation 235235 244012
+82 => train : validation 222048 259243
+83 => train : validation 239019 458320
+84 => train : validation 249072 226324
+85 => train : validation 288555 243051
+86 => train : validation 252014 229299
+87 => train : validation 308857 242053
+88 => train : validation 271471 229234
+89 => train : validation 280389 229832
+90 => train : validation 268722 229274
+91 => train : validation 266515 230259
+92 => train : validation 275008 230565
+93 => train : validation 34927765 44594925
+94 => train : validation 283031 231031
+95 => train : validation 269415 226401
+96 => train : validation 271684 229116
+97 => train : validation 257254 234684
+98 => train : validation 235697 244203
+99 => train : validation 297945 235706
+Generation: 4
+0 => train : validation 13254389 15455730
+1 => train : validation 247568 226621
+2 => train : validation 249072 226324
+3 => train : validation 247807 227326
+4 => train : validation 247807 227326
+5 => train : validation 254317 228200
+6 => train : validation 254317 228200
+7 => train : validation 13764496 20495065
+8 => train : validation 252014 229299
+9 => train : validation 252612 229218
+10 => train : validation 720931 530556
+11 => train : validation 19459297 26281241
+12 => train : validation 247897 226435
+13 => train : validation 241047 232463
+14 => train : validation 235065 230436
+15 => train : validation 256363 222583
+16 => train : validation 270536 229038
+17 => train : validation 249072 226324
+18 => train : validation 270536 229038
+19 => train : validation 433097 528839
+20 => train : validation 856338 654180
+21 => train : validation 252574 229227
+22 => train : validation 257392 224163
+23 => train : validation 235065 230436
+24 => train : validation 241054 232461
+25 => train : validation 269794 226306
+26 => train : validation 251643 227674
+27 => train : validation 272981 229637
+28 => train : validation 275481 230579
+29 => train : validation 254473 226721
+30 => train : validation 252612 229218
+31 => train : validation 254317 228200
+32 => train : validation 246328 228411
+33 => train : validation 1267576 1085841
+34 => train : validation 247840 227304
+35 => train : validation 277644 230014
+36 => train : validation 270149 229156
+37 => train : validation 247892 226439
+38 => train : validation 249181 226283
+39 => train : validation 246176 227653
+40 => train : validation 249564 226114
+41 => train : validation 275481 230579
+42 => train : validation 306830 237234
+43 => train : validation 233972 233207
+44 => train : validation 269991 229207
+45 => train : validation 7209804 8060231
+46 => train : validation 278481 226597
+47 => train : validation 236567 230019
+48 => train : validation 288905 234623
+49 => train : validation 240931 232412
+50 => train : validation 241067 230683
+51 => train : validation 243849 227409
+52 => train : validation 249564 226114
+53 => train : validation 269991 229207
+54 => train : validation 270536 229038
+55 => train : validation 268722 229274
+56 => train : validation 310249 647144
+57 => train : validation 336669 253303
+58 => train : validation 270149 229156
+59 => train : validation 247892 226439
+60 => train : validation 277962 226535
+61 => train : validation 292020 268461
+62 => train : validation 249072 226324
+63 => train : validation 243174 225478
+64 => train : validation 247350 227524
+65 => train : validation 256067 227067
+66 => train : validation 268400 229660
+67 => train : validation 269817 225974
+68 => train : validation 446580 892755
+69 => train : validation 236567 230019
+70 => train : validation 246176 227653
+71 => train : validation 255638 227107
+72 => train : validation 242894 230782
+73 => train : validation 241751 226953
+74 => train : validation 249072 226324
+75 => train : validation 247807 227326
+76 => train : validation 269991 229207
+77 => train : validation 249564 226114
+78 => train : validation 247841 227304
+79 => train : validation 255463 227125
+80 => train : validation 240214 233862
+81 => train : validation 254148 228161
+82 => train : validation 249564 226114
+83 => train : validation 268363 229675
+84 => train : validation 270536 229038
+85 => train : validation 254317 228200
+86 => train : validation 270536 229038
+87 => train : validation 270536 229038
+88 => train : validation 736910 509895
+89 => train : validation 270536 229038
+90 => train : validation 254317 228200
+91 => train : validation 254317 228200
+92 => train : validation 254105 228170
+93 => train : validation 246328 228411
+94 => train : validation 269489 229354
+95 => train : validation 270535 229038
+96 => train : validation 267654 226581
+97 => train : validation 245282 225961
+98 => train : validation 247841 227304
+99 => train : validation 268688 229292
+100
+All is well that ends well :)
+
+
