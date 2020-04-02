@@ -16,7 +16,7 @@ def generate_data_for_comparison(validation_data,  train_data):
 
     # return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
-    return_array = np.multiply ( np.power(validation_data , 4)  , np.power(train_data , 3)  )
+    return_array = np.multiply ( np.power(validation_data , 7)  , np.power(train_data , 4)  )
 
     return return_array.tolist()
 
