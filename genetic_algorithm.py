@@ -55,7 +55,7 @@ except:
 
 
 
-for i in range(0, 3):
+for i in range(0, 2):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)

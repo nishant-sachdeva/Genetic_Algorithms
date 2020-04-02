@@ -13,6 +13,6 @@ private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 for dude in range( len(population) ) :
 	try:
 		temp = client_moodle.submit(private_key, population[dude])
-		print(str(dude) + " " + temp)
+		print(str(dude) + " " + temp  , end='\r')
 	except:
 		print("Could not send request")

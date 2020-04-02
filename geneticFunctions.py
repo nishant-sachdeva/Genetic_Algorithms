@@ -150,7 +150,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.8 : 
+        if coin > 0.99 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
