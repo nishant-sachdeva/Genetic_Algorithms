@@ -32,7 +32,7 @@ private_key="JVlzF9h4oeN3fyaOoSYgA1HiW82SlS1iptEqtB4lDQAeCK2k8C"
 population = []
 
 try:
-    with open('new_data.txt') as new_filename:
+    with open('data.txt') as new_filename:
         population = json.load(new_filename)
         # population=population[10:]
         # for i in range(0,90):
@@ -55,7 +55,7 @@ except:
 
 
 
-for i in range(0, 5):
+for i in range(0, 3):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)
@@ -65,18 +65,27 @@ for i in range(0, 5):
     population=nextGenPopulation
     # print(len(population))
     # print(len(nextGenPopulation))
+    try:
+        with open('data.txt' , "w") as f:
+            json.dump(population , f)
+        print(len(population))
+        print("All is well that ends well :)")
+
+    except:
+        print("the file did not load :/")
+        print(population)
 
 
 
 # I have to find a way to make this population persistent
-try:
-    with open('new_data.txt' , "w") as f:
-        json.dump(population , f)
-        print(len(population))
-        print("All is well that ends well :)")
+# try:
+#     with open('data.txt' , "w") as f:
+#         json.dump(population , f)
+#         print(len(population))
+print("All is well that ends well :)")
 
-except:
-    print("the file did not load :/")
-    print(population)
+# except:
+#     print("the file did not load :/")
+#     print(population)
 
 # this code should write my file into the j

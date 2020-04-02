@@ -28,7 +28,7 @@ def naturalSelection(population, populationSize, private_key):
     for i in range(0, populationSize):
         temp = client_moodle.get_errors(private_key, population[i])
         
-        # print(population[i] , end=' ')
+        print(population[i])
         print( str(i) + " => train : validation " +str(int(temp[0]))+" "+str(int(temp[1])))
         # print(Style.RESET_ALL)
         
@@ -150,7 +150,7 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.9 : 
+        if coin > 0.8 : 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
