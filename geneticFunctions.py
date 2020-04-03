@@ -67,8 +67,12 @@ def naturalSelection(population, populationSize, private_key):
     # return commonIndices, indexTrain, indexValidation, thisGenFitnessTrain, thisGenFitnessValidation
 
 def crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing):
+    print("individual selected for elitism \n\n")
     for i in range(0, len(fittestIndividualsForDirect)):
         nextGenPopulation.append(population[fittestIndividualsForDirect[i]])
+        for j in population[fittestIndividualsForDirect[i]]
+            print(j, end=" ")
+        print()
         
     for i in range(0, int((populationSize-len(fittestIndividualsForDirect))/2)):
         tempArray = mate(population, fittestIndividualsForCrossing)
@@ -114,6 +118,24 @@ def mate(population, symmetricDifferenceIndex):
             offSpring0.append(population[b][i])
             offSpring1.append(population[a][i])
     
+    print("parent0 \n\n")
+    for i in population[a]:
+        print(i, end=" ")
+    print()
+    print("parent1\n\n")
+    for i in population[b]:
+        print(i, end=" ")
+    print()
+    print("offspring0\n\n")
+    for i in offSpring0:
+        print(i, end=" ")
+    print()
+    print("offspring1\n\n")
+    for i in offSpring1:
+        print(i in end=" ")
+    print()
+    
+
     #####single-point crossover
 
     # crossoverPoint=random.randint(0, 10)
