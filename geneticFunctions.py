@@ -16,7 +16,7 @@ def generate_data_for_comparison(validation_data,  train_data):
 
     # return_array = np.multiply( np.power(  np.subtract(validation_data , train_data)  , 2)  , validation_data ) 
 
-    return_array = np.multiply ( np.power(validation_data , 7)  , np.power(train_data , 4)  )
+    return_array = np.multiply ( np.power(validation_data , 5)  , np.power(train_data , 2)  )
 
     return return_array.tolist()
 
@@ -49,7 +49,14 @@ def naturalSelection(population, populationSize, private_key):
     # sortedFitnessValArray = sorted(thisGenFitnessValidation) 
     
     fittestIndividualsForDirect = [i for i in range(0, int(populationSize/10))]
-    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/5))]
+    fittestIndividualsForCrossing = [i for i in range(0, int(populationSize/2))]
+
+    print("parents for crossing")
+    for i in range(int(populationSize/2)):
+        for j in population[i]:
+            print(j, end=" ")
+        print("\n\n")
+
 
     return population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA
     ####median method
@@ -67,15 +74,15 @@ def naturalSelection(population, populationSize, private_key):
     # return commonIndices, indexTrain, indexValidation, thisGenFitnessTrain, thisGenFitnessValidation
 
 def crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing):
-    print("individual selected for elitism \n\n")
+    print("individual(s) selected for elitism")
     for i in range(0, len(fittestIndividualsForDirect)):
         nextGenPopulation.append(population[fittestIndividualsForDirect[i]])
-        for j in population[fittestIndividualsForDirect[i]]
+        for j in population[fittestIndividualsForDirect[i]]:
             print(j, end=" ")
-        print()
+        print("\n")
         
     for i in range(0, int((populationSize-len(fittestIndividualsForDirect))/2)):
-        tempArray = mate(population, fittestIndividualsForCrossing)
+        tempArray = mate(population, populationSize)
         nextGenPopulation.append(tempArray[0])
         nextGenPopulation.append(tempArray[1])
     if len(nextGenPopulation)!=populationSize:
@@ -100,11 +107,11 @@ def crossover(population, nextGenPopulation, populationSize, fittestIndividualsF
     # return nextGenPopulation
 
 
-def mate(population, symmetricDifferenceIndex):
-    a=random.randint(0, len(symmetricDifferenceIndex)-1)
-    b=random.randint(0, len(symmetricDifferenceIndex)-1)
+def mate(population, populationSize):
+    a=random.randint(0, populationSize/2-1)
+    b=random.randint(0, populationSize/2-1)
     while b==a:
-        b=random.randint(0, len(symmetricDifferenceIndex)-1)
+        b=random.randint(0, populationSize/2-1)
     offSpring0=[]
     offSpring1=[]
     # #####uniform crossover
@@ -118,23 +125,23 @@ def mate(population, symmetricDifferenceIndex):
             offSpring0.append(population[b][i])
             offSpring1.append(population[a][i])
     
-    print("parent0 \n\n")
+    print("parent0")
     for i in population[a]:
         print(i, end=" ")
-    print()
-    print("parent1\n\n")
+    print("\n\n")
+    print("parent1")
     for i in population[b]:
         print(i, end=" ")
-    print()
-    print("offspring0\n\n")
+    print("\n\n")
+    print("offspring0")
     for i in offSpring0:
         print(i, end=" ")
-    print()
-    print("offspring1\n\n")
+    print("\n\n")
+    print("offspring1")
     for i in offSpring1:
-        print(i in end=" ")
-    print()
-    
+        print(i, end=" ")
+    print("\n\n")
+
 
     #####single-point crossover
 
@@ -172,14 +179,16 @@ def mate(population, symmetricDifferenceIndex):
 def mutate(nextGenPopulation, populationSize):
     for i in range(0 , populationSize):
         coin = random.uniform(0,1)
-        if coin > 0.9 : 
+        if coin > 0.7 :
+            print(str(i), "individual selected") 
             for j in range(0 , 11):
                 another_coin = random.uniform(0,1)
                 if another_coin > 0.35:
+                    print(str(j), "gene selected")
                     # now we form an new gene basically
-                    # temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
+                    temp = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1) * random.choice([-1 , 1])
 
-                    nextGenPopulation[i][j]  = nextGenPopulation[i][j] * random.uniform(0.9 , 1.1)
+                    nextGenPopulation[i][j] +=temp
 
                     if math.fabs(nextGenPopulation[i][j]) > 10: 
                         nextGenPopulation[i][j] = float(nextGenPopulation[i][j]/10 )

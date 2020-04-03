@@ -7,7 +7,7 @@ import json
 
 import pickle
 
-populationSize = 10
+populationSize = 100
 
 f = open("overfit.txt", "r+")
 
@@ -34,7 +34,7 @@ population = []
 try:
     with open('data.txt') as new_filename:
         population = json.load(new_filename)
-        population=population[90:]
+        # population=population[90:]
         # for i in range(0,90):
         #     person = []
         #     for j in range(0, 11):
@@ -55,40 +55,40 @@ except:
 
 
 
-for i in range(0, 2):
+for i in range(0, 10):
     nextGenPopulation = []
     print("Generation: "+str(i+1))
     print("Population is")
     for i in population:
         for j in i:
             print(j, end=" ")
-        print()
+        print("\n\n")
     population, fittestIndividualsForDirect, fittestIndividualsForCrossing, sortedFitnessValArray, sortedFitnessValA=geneticFunctions.naturalSelection(population, populationSize, private_key)
     nextGenPopulation=geneticFunctions.crossover(population, nextGenPopulation, populationSize, fittestIndividualsForDirect, fittestIndividualsForCrossing)
     print("nextGenPopulation after crossover is \n\n")
     for i in nextGenPopulation:
         for j in i:
             print(j, end=" ")
-        print()
+        print("\n\n")
     nextGenPopulation=geneticFunctions.mutate(nextGenPopulation, populationSize)
     print("nextGenPopulation after mutation is \n\n")
     for i in nextGenPopulation:
         for j in i:
             print(j, end=" ")
-        print()
-    # geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0], sortedFitnessValA)
+        print("\n\n")
+    geneticFunctions.storeBestGeneration(population, sortedFitnessValArray[0], sortedFitnessValA)
     population=nextGenPopulation
     # print(len(population))
     # print(len(nextGenPopulation))
-    # try:
-    #     with open('data.txt' , "w") as f:
-    #         json.dump(population , f)
-    #     print(len(population))
-    #     print("All is well that ends well :)")
+    try:
+        with open('data.txt' , "w") as f:
+            json.dump(population , f)
+        print(len(population))
+        print("All is well that ends well :)")
 
-    # except:
-    #     print("the file did not load :/")
-    #     print(population)
+    except:
+        print("the file did not load :/")
+        print(population)
 
 
 
